@@ -1,0 +1,6 @@
+{
+  "devDependencies": {
+    "@babel/preset-react": "^7.0.0",
+    "@symfony/webpack-encore": "^1.4.0"
+  }
+}
