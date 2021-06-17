@@ -13,6 +13,7 @@
 </div>
 {% endblock %}
 {% block javascripts %}
+    {{ parent() }}
     {{ encore_entry_script_tags('app') }}
 
     <!-- Renders app.js & a webpack runtime.js file
