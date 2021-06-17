@@ -61,6 +61,13 @@ php bin/console doctrine:database:create
 php bin/console doctrine:schema:update -f
 ```
 
+## javascript compilation
+
+``yarn encore dev --watch``
+
+so you can run it external by the command 
+``docker-compose exec worker yarn encore dev --watch``
+
 ## project availability
 
 the worker is available in ``http://localhost``but you can change the port of worker in

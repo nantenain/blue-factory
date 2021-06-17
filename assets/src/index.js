@@ -1,17 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { HydraAdmin, ResourceGuesser } from "@api-platform/admin";
+import UserList from "./packages/UserList";
+import UserView from "./packages/UserView";
+import EditUser from "./packages/EditUser";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+const Admin = () => (
+    <HydraAdmin entrypoint="http://localhost/api">
+        <ResourceGuesser name="users" list={UserList} show={UserView} edit={EditUser} />
+        <ResourceGuesser name="experiences" />
+    </HydraAdmin>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+
+
+ReactDOM.render(<Admin />, document.getElementById('root'));
